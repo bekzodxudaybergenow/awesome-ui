@@ -1,5 +1,5 @@
 Figma: [Maket](https://www.figma.com/design/RmZVQBZVrqJqQoQ4KDV9WT/Awesome-UI---Landing-Page-(Community)-(Copy)?node-id=0-1&node-type=canvas&t=oMpswLtlW4znmHn6-0)\
-Netlify: [View]()
+Netlify: [View](https://awesome-ui-bb.netlify.app/)
 
 Qo'shimcha foydalanildi: TinyPNG, SVGOMG, Transfonter;
 
