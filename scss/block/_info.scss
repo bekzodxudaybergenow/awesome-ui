@@ -10,6 +10,7 @@
         height: 70px;
         position: absolute;
         z-index: -1;
+        border-radius: 8px;
         background: linear-gradient(to bottom, var(--accent4-color), #ffffff);
     }
 }
@@ -88,7 +89,12 @@
         flex-direction: row;
         column-gap: 60px;
     }
+    .info-content--subtitle {
+        font-size: 18px;
+        padding-top: 30px;
+    }
     .info-content--title {
+        font-size: 34px;
         margin-bottom: 60px;
     }
     .info-list {
