@@ -69,6 +69,9 @@
     }
 }
 @media screen and (min-width: 1024px) {
+    .header {
+        padding: 35px 0 120px;
+    }
     .header-logo {
         & img {
             width: 180px;
@@ -108,11 +111,6 @@
     background-repeat: no-repeat;
     background-position: center 45px;
 }
-.hero-row {
-
-}
-.hero-content {
-}
 .hero-content--title {
     font-weight: 500;
     font-size: 24px;
@@ -132,8 +130,10 @@
     }
     .hero-row {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+        max-width: 1100px;
+        margin: 0 auto;
     }
     .hero-content {
         max-width: 495px;
@@ -148,7 +148,4 @@
     .hero-image {
         display: block;
     }
-}
-@media screen and (min-width: 1024px) {
-    
 }

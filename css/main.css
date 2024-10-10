@@ -318,6 +318,7 @@ template {
 body {
   font-family: var(--main-font);
   font-size: 16px;
+  color: var(--text-color);
 }
 
 h1, h2, h3 {
@@ -334,6 +335,13 @@ h1, h2, h3 {
   font-weight: 500;
   font-size: 40px;
   color: var(--accent1-color);
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: var(--accent3-color);
 }
 
 .desc {
@@ -412,8 +420,10 @@ h1, h2, h3 {
   --accent1-color: #647B64;
   --accent2-color: #66AC66;
   --accent3-color: #F3B562;
+  --accent4-color: #EF8031;
   --accent4-color: #f0dcc5;
   --light-color: #FEFEFE;
+  --white-color: #ffffff;
   --title-color: #333333;
   --text-color: #4f4f4f;
   --btn-color: linear-gradient(120deg, #647B64, #66AC66);
@@ -490,6 +500,9 @@ h1, h2, h3 {
   }
 }
 @media screen and (min-width: 1024px) {
+  .header {
+    padding: 35px 0 120px;
+  }
   .header-logo img {
     width: 180px;
     height: 40px;
@@ -547,8 +560,10 @@ h1, h2, h3 {
   }
   .hero-row {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
   }
   .hero-content {
     max-width: 495px;
@@ -562,5 +577,170 @@ h1, h2, h3 {
   }
   .hero-image {
     display: block;
+  }
+}
+.info {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 50px;
+  background: linear-gradient(to top, #faf4ee, #ffffff);
+}
+.info::before {
+  content: "";
+  width: 235px;
+  height: 70px;
+  position: absolute;
+  z-index: -1;
+  background: linear-gradient(to bottom, var(--accent4-color), #ffffff);
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+}
+
+.info-content {
+  max-width: 412px;
+}
+
+.info-content--subtitle {
+  display: inline-block;
+  padding-top: 10px;
+  margin-bottom: 5px;
+}
+
+.info-content--title {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+
+.info-content--desc {
+  margin-bottom: 24px;
+}
+
+.info-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  max-width: 100%;
+  list-style: none;
+}
+
+.info-list--item {
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px 2px rgba(160, 184, 160, 0.1);
+}
+
+.info-item--img {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: var(--light-color);
+  box-shadow: 0 0 20px 2px rgba(160, 184, 160, 0.1);
+}
+.info-item--img svg {
+  width: 15px;
+  height: 15px;
+}
+.info-item--img svg path {
+  fill: var(--accent1-color);
+}
+
+.info-item--title {
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--title-color);
+  margin-bottom: 5px;
+}
+
+.info-item--desc {
+  font-size: 8px;
+  max-width: 115px;
+}
+
+@media screen and (min-width: 1024px) {
+  .info::before {
+    width: 42%;
+    height: 120px;
+  }
+  .info-row {
+    justify-content: space-evenly;
+    flex-direction: row;
+    column-gap: 60px;
+  }
+  .info-content--title {
+    margin-bottom: 60px;
+  }
+  .info-list {
+    gap: 15px;
+    padding-top: 20px;
+  }
+  .info-list--item {
+    width: 240px;
+    height: 180px;
+    padding: 30px;
+    box-shadow: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .info-list--item:hover {
+    box-shadow: 0 0 20px 2px rgba(160, 184, 160, 0.1);
+    background-color: var(--white-color);
+  }
+  .info-item--img {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  .info-item--img svg {
+    width: 22px;
+    height: 22px;
+  }
+  .info-item--title {
+    font-size: 20px;
+  }
+  .info-item--desc {
+    font-size: 12px;
+    max-width: 220px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .info-row {
+    justify-content: left;
+    column-gap: 160px;
+  }
+  .info-list {
+    gap: 25px;
+  }
+  .info-list--item {
+    width: 288px;
+    height: 237px;
+    padding: 40px;
+  }
+  .info-item--img {
+    width: 48px;
+    height: 48px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .info-item--img svg {
+    width: 28px;
+    height: 28px;
+  }
+  .info-item--title {
+    font-size: 24px;
+  }
+  .info-item--desc {
+    font-size: 13px;
+    max-width: 198px;
   }
 }

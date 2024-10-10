@@ -8,6 +8,7 @@
 body {
     font-family: var(--main-font);
     font-size: 16px;
+    color: var(--text-color);
 }
 h1, h2, h3 {
     margin: 0;
@@ -21,6 +22,12 @@ h1, h2, h3 {
     font-weight: 500;
     font-size: 40px;
     color: var(--accent1-color);
+}
+.subtitle {
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--accent3-color);
 }
 .desc {
     font-weight: 400;
