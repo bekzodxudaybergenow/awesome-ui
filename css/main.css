@@ -346,11 +346,16 @@ h1, h2, h3 {
 
 .desc {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 10px;
   color: var(--text-color);
   letter-spacing: 1.3px;
 }
 
+@media screen and (min-width: 425px) {
+  .desc {
+    font-size: 14px;
+  }
+}
 .btn {
   display: flex;
   justify-content: space-between;
@@ -881,5 +886,74 @@ h1, h2, h3 {
   .service-item--desc {
     font-size: 14px;
     max-width: 100%;
+  }
+}
+.about {
+  padding: 50px 0;
+}
+
+.about-picture {
+  display: none;
+}
+
+.about-content {
+  max-width: 412px;
+}
+
+.about-content--subtitle {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.about-content--title {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.about-content--desc {
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 30px;
+  }
+  .about-picture {
+    display: block;
+  }
+  .about-picture img {
+    max-width: 423px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about {
+    padding: 200px 0 100px;
+  }
+  .about-row {
+    column-gap: 60px;
+  }
+  .about-content--subtitle {
+    font-size: 18px;
+  }
+  .about-content--title {
+    font-size: 34px;
+  }
+  .about-content--desc {
+    font-size: 14px;
+  }
+  .about-picture {
+    display: block;
+  }
+  .about-picture img {
+    max-width: 623px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .about-row {
+    justify-content: space-between;
   }
 }
